@@ -12,10 +12,4 @@ class palindromeObject(wordObject):
             v_palindrome=False
             
         return v_palindrome
-
-def main():
-    v_palindrome=palindromeObject.f_word_inv()
-    print(v_palindrome)
-
-if __name__=="__main__":
-    main()
+    
