@@ -1,5 +1,11 @@
-d_vowels=["A","E","I","O","U","Y","a","e","i","o","u","y"]
 class wordObject:
+    
+    d_vowels=["a","e","i","o","u","y"]
+    
+    def __init__(self,v_word) -> None:
+         #intanciate? and transform v_word into lowers caracters ignore
+         v_word=v_word.lower()
+         pass
     
     def f_compt(v_word):
         #compt length
@@ -10,21 +16,16 @@ class wordObject:
         #compt vowels in the word
         v_vowels=0
         for letter in v_word:
-            for vowel in d_vowels:
-                if letter==vowel:
+            if letter in wordObject.d_vowels:
                     v_vowels=v_vowels+1
-
 
         return v_vowels
 
-
-    def f_return_word(v_word):
-        v_word=v_word[::-1]
-
 def main():
+
     v_word=input()
     v_word_length=wordObject.f_compt(v_word)
-    v_vowels=wordObject.f_vowels(v_word, d_vowels)
+    v_vowels=wordObject.f_vowels(v_word, wordObject.d_vowels)
 
     print (v_word_length)
     print (v_vowels)

@@ -1,4 +1,5 @@
-class palindrome_object():
+from word_object import wordObject
+class palindromeObject(wordObject):
 
     #function to inverse words and checking if there are palindromic
     def f_word_inv(v_word):
@@ -13,5 +14,8 @@ class palindrome_object():
         return v_palindrome
 
 def main():
-    v_palindrome=palindrome_object.f_word_inv()
+    v_palindrome=palindromeObject.f_word_inv()
     print(v_palindrome)
+
+if __name__=="__main__":
+    main()
